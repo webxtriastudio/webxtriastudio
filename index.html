@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WebXtria Studio</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+  body{background:#0a0a0a;color:#f5f5f5;overflow-x:hidden;}/* Appbar */ header{position:fixed;top:0;width:100%;display:flex;align-items:center;justify-content:space-between;padding:15px 60px;background:rgba(10,10,10,0.85);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,0.08);z-index:100;transition:padding 0.3s;} .logo{height:50px;} .title{font-size:26px;font-weight:700;color:#ffb347;letter-spacing:1px;} .burger{display:none;width:30px;height:22px;flex-direction:column;justify-content:space-between;cursor:pointer;} .burger span{height:3px;background:#f5f5f5;border-radius:2px;transition:0.3s;} nav{display:flex;gap:25px;} nav a{color:#fff;text-decoration:none;font-weight:500;transition:0.3s;position:relative;} nav a::after{content:"";position:absolute;width:0;height:2px;background:#ffb347;left:0;bottom:-4px;transition:0.3s;} nav a:hover::after{width:100%;} nav a:hover{color:#ffb347;}
+
+@media(max-width:768px){ nav{position:fixed;top:70px;right:-250px;width:200px;background:#111;flex-direction:column;padding:20px;border-left:3px solid #ffb347;box-shadow:-4px 0 15px rgba(0,0,0,0.3);gap:0;transition:0.4s;} nav a{padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05);} nav.show{right:0;} .burger{display:flex;} }
+
+/* Hero Section */ .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;text-align:center;overflow:hidden;padding-top:120px;} .spotlight{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(255,180,71,0.18),transparent 70%);filter:blur(120px);animation:moveSpot 12s infinite alternate ease-in-out;} .spotlight:nth-child(2){top:10%;left:15%;animation-delay:2s;} .spotlight:nth-child(3){bottom:10%;right:15%;animation-delay:4s;} @keyframes moveSpot{from{transform:translate(0,0);}to{transform:translate(80px,50px);}}
+
+.poster{width:380px;height:380px;background:url('images/hero.png') center/cover no-repeat;border-radius:18px;box-shadow:0 20px 50px rgba(0,0,0,0.5);animation:fadeZoom 1.5s ease forwards;} @media(min-width:992px){.poster{width:420px;height:420px;}}
+
+.bottom-content{margin-top:80px;max-width:850px;padding:0 30px;animation:fadeInUp 1.5s ease forwards;} .bottom-content h1{font-size:3em;margin-bottom:15px;color:#ffb347;} .bottom-content p{opacity:0.9;line-height:1.8;font-size:1.1em;}
+
+.btns{margin-top:25px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap;} .btn1{background:#ffb347;color:#111;padding:14px 34px;border:none;border-radius:35px;font-weight:600;font-size:1.05em;cursor:pointer;transition:0.3s;box-shadow:0 6px 20px rgba(255,180,71,0.3);} .btn1:hover{background:#ffc766;transform:translateY(-3px);} .btn2{background:#fff;color:#111;padding:14px 34px;border:none;border-radius:35px;font-weight:600;font-size:1.05em;cursor:pointer;transition:0.3s;box-shadow:0 6px 18px rgba(255,255,255,0.2);} .btn2:hover{background:#f2f2f2;transform:translateY(-3px);}
+
+@keyframes fadeZoom{from{opacity:0;transform:scale(0.9);}to{opacity:1;transform:scale(1);}} @keyframes fadeInUp{from{opacity:0;transform:translateY(60px);}to{opacity:1;transform:translateY(0);}} </style>
+
+</head>
+<body>
+<header>
+  <img src="images/logo.png" alt="WebXtria Logo" class="logo">
+  <div class="title">WebXtria Studio</div>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  <nav id="menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+</header><div class="hero" id="home">
+  <div class="spotlight"></div>
+  <div class="spotlight"></div>
+  <div class="spotlight"></div>
+  <div class="poster"></div>
+  <div class="bottom-content">
+    <h1>Designing a Better World Today</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra, nisl sit amet tincidunt bibendum, neque eros varius ipsum. Cras a sollicitudin sem. Integer sed dui ut sapien faucibus laoreet.</p>
+    <div class="btns">
+      <button class="btn1" onclick="location.href='#services'">What We Do</button>
+      <button class="btn2" onclick="location.href='#testimonials'">Clients</button>
+    </div>
+  </div>
+</div><script>
+  const burger=document.getElementById('burger');
+  const menu=document.getElementById('menu');
+  burger.onclick=()=>menu.classList.toggle('show');
+</script></body>
+</html>
