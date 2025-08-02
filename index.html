@@ -8,7 +8,7 @@
   *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
   body{background:#0a0a0a;color:#f5f5f5;overflow-x:hidden;}
 
-  /* Appbar */
+
   header{
     position:fixed;top:0;width:100%;
     display:flex;align-items:center;justify-content:space-between;
@@ -26,20 +26,20 @@
   nav a:hover::after{width:100%;}
   nav a:hover{color:#ffb347;}
 
-  /* ✅ Mobile Navigation */
+ 
   @media(max-width:989px){
     nav{
-      display:none; /* hide desktop nav by default */
+      display:none; 
       position:fixed;top:70px;right:-250px;width:200px;background:#111;
       flex-direction:column;padding:20px;border-left:3px solid #ffb347;
       box-shadow:-4px 0 15px rgba(0,0,0,0.3);gap:0;transition:0.4s;
     }
     nav a{padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
-    nav.show{display:flex;right:0;} /* show on click */
+    nav.show{display:flex;right:0;}
     .burger{display:flex;}
   }
 
-  /* Hero Section */
+  
   .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;text-align:center;overflow:hidden;padding-top:120px;}
   .spotlight{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(255,180,71,0.18),transparent 70%);filter:blur(120px);animation:moveSpot 12s infinite alternate ease-in-out;}
   .spotlight:nth-child(2){top:10%;left:15%;animation-delay:2s;}
@@ -69,11 +69,11 @@
   <div class="title">WebXtria Studio</div>
   <div class="burger" id="burger"><span></span><span></span><span></span></div>
   <nav id="menu">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
+    <a href="https://webxtriastudio.github.io">Home</a>
+    <a href="https://webxtriastudio.github.io/about-us">About</a>
     <a href="https://webxtriastudio.github.io/service">Services</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Contact Us</a>
+    <a href="https://webxtriastudio.github.io/clients">Testimonials</a>
+    <a href="https://webxtriastudio.github.io/contact-us">Contact Us</a>
   </nav>
 </header>
 
@@ -88,8 +88,8 @@
        For any inquiries or project discussions, please email us at<br>
        <strong>webxtriastudio@gmail.com</strong></p>
     <div class="btns">
-      <button class="btn1" onclick="location.href='#services'">Thank you for</button>
-      <button class="btn2" onclick="location.href='#testimonials'">your patience</button>
+      <button class="btn1" onclick="location.href='https://webxtriastudio.github.io/service'">Services</button>
+      <button class="btn2" onclick="location.href='https://webxtriastudio.github.io/clients'">Clients</button>
     </div>
   </div>
 </div>
